@@ -25,16 +25,15 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '25'
-        distribution: 'oracle'
+        distribution: 'temurin'
         cache: maven
     - name: Build with Maven
       run: mvn -B package
       working-directory: backend
     - run: mkdir staging && cp target/*.jar staging
       working-directory: backend
-    - name: Upload backend artifact
+    - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: Package
-        path: staging
-        working-directory: backend
+        path: backend/staging
