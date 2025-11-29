@@ -1,4 +1,5 @@
-# run using docker run -p 8080:8080  -t springio/gs-spring-boot-docker .
+# steps to test locally
+# docker build -t backend . && docker run -p 8080:8080 backend
 
 FROM eclipse-temurin:25
 RUN addgroup demogroup; adduser  --ingroup demogroup --disabled-password demo
