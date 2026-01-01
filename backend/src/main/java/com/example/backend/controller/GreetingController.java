@@ -1,4 +1,4 @@
-package com.example.backend;
+package com.example.backend.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;

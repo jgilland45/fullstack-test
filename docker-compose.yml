@@ -1,3 +1,5 @@
+# run using docker compose --env-file ../dev.env up --build
+
 version: "3.8"
 
 services:
@@ -44,13 +46,13 @@ services:
     ports:
       - "8080:8080"
 
-  frontend:
-    build: ./frontend
-    container_name: frontend
-    environment:
-      REACT_APP_API_URL: http://localhost:8080
-    ports:
-      - "3000:3000"
+  # frontend:
+  #   build: ./frontend
+  #   container_name: frontend
+  #   environment:
+  #     REACT_APP_API_URL: http://localhost:8080
+  #   ports:
+  #     - "3000:3000"
 
 volumes:
   pgdata:
