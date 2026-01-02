@@ -1,8 +1,8 @@
 # steps to test locally
 # docker build -t backend . && docker run -p 8080:8080 backend
 
-# Build stage - uses JDK 25
-FROM eclipse-temurin:25-jdk AS builder
+# Build stage - uses JDK 21
+FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /app
 
@@ -17,8 +17,8 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 RUN ./mvnw -DskipTests clean package
 
-# Runtime stage - uses JRE 25
-FROM eclipse-temurin:25-jre
+# Runtime stage - uses JRE 21
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 

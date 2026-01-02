@@ -5,6 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface ActivePersonRepository
-        extends JpaRepository<ActivePerson, UUID> {
+public interface ActivePersonRepository extends JpaRepository<ActivePerson, UUID> {
 }
